@@ -21,7 +21,12 @@
   background-color: var(--background-color);
   min-inline-size: 320px;
   min-block-size: 100vh;
-  min-block-size: 100dvb;
+}
+
+@supports(min-block-size: 100dvb) {
+  .page {
+    min-block-size: 100dvb;
+  }
 }
 
 .header__container {
@@ -38,9 +43,9 @@
   display: block;
   padding-block-start: 120px;
   font-family: var(--accent-font-family);
-  font-weight: 400;
   font-size: var(--title-font-size);
   text-transform: uppercase;
+  font-variation-settings: 'wght' var(--button-font-weight);
 }
 
 .header__title {
@@ -66,11 +71,11 @@
 .theme-menu__button {
   border: none;
   font-family: var(--accent-font-family);
-  font-weight: 400;
-  font-size: 14px;
+  font-size: var(--button-font-size);
   text-transform: uppercase;
   background-color: transparent;
   cursor: pointer;
+  font-variation-settings: 'wght' var(--button-font-weight);
 }
 
 .theme-menu__button:after {
@@ -125,15 +130,12 @@
   display: grid;
   grid-template-columns: minmax(0, 700px);
   margin: auto;
+  border: 2px solid var(--main-color);
   background-color: var(--background-color);
 }
 
 .main > .section:first-child {
   margin-block-start: 100px;
-}
-
-.section {
-  border: 2px solid var(--main-color);
 }
 
 .section__title {
@@ -157,15 +159,14 @@
   z-index: 1;
   color: var(--main-color);
   font-family: var(--accent-font-family);
-  font-weight: var(--button-font-weight);
   font-size: var(--button-font-size);
-  font-size: 14px;
   text-shadow:
       -1px 0 var(--background-color), 
       0 1px var(--background-color), 
       1px 0 var(--background-color), 
       0 -1px var(--background-color);
   filter: opacity(0.5);
+  font-variation-settings: 'wght' var(--button-font-weight);
   mix-blend-mode: hard-light;
 }
 
@@ -214,6 +215,7 @@
   transition: background-position 0.5s ease-in-out;
   cursor: pointer;
   min-inline-size: 130px;
+  font-variation-settings: 'wght' var(--button-font-weight);
 }
 
 .button:hover {
@@ -232,9 +234,9 @@
 
 .button__text {
   color: var(--button-text-color);
-  font-weight: var(--button-font-weight);
   font-size: var(--button-font-size);
   line-height: 0.9;
+  font-variation-settings: 'wght' var(--button-font-weight);
   mix-blend-mode: difference;
 }
 
@@ -292,6 +294,7 @@
   text-transform: uppercase;
   background-color: var(--background-color);
   inline-size: clamp(341px, 50%, 357px);
+  font-variation-settings: 'wght' var(--button-font-weight);
 }
 
 .dialog[open] {
@@ -396,4 +399,4 @@
     max-block-size: 21px;
     max-inline-size: 21px;
   }
- } 
+ }
