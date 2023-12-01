@@ -6,9 +6,106 @@
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+/* анимация стрелки в header */
+@keyframes arrow {
+  to {
+    transform: translateX(-16px);
+  }
+}
+
+/* анимации иконки сердца */
+.sparks {
+  opacity: 0%;
+}
+
+    /* состояние hover */
+.heart .core, 
+.heart .main-body {
+  fill: transparent;
+  transition: fill 0.3s;
+}
+
+.heart .main-body {
+  transition-delay: 0.05s;
+}
+
+.heart:hover .core,
+.heart:hover .main-body {
+  fill: var(--main-color);
+}
+
+    /* затухание когда курсор уходит */
+.heart:not(:hover) .core {
+  transition: fill 0.3s 0.03s;
+}
+
+.heart:not(:hover) .main-body {
+  transition: fill 0.3s;
+}
+
+    /* состояние active */
+.heart:active .core,
+.heart:active .main-body {
+  fill: var(--heart-color);
+}
+
+    /* анимация при клике */
+.like-icon.is-liked .core,
+.like-icon.is-liked .main-body,
+.like-icon.is-liked .contour {
+  fill: var(--heart-color);
+  transition: fill 0.3s;
+}
+
+.like-icon.is-liked .main-body {
+  transition-delay: 0.03s;
+}
+
+.like-icon.is-liked .contour {
+  transition-delay: 0.06s;
+}
+
+.like-icon.is-liked {
+  transform-origin: center;
+  animation-name: heart-scale;
+  animation-delay: 0.1s;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+  animation-timing-function: ease-in;
+  animation-duration: 0.2s;
+}
+
+@keyframes heart-scale {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.like-icon.is-liked .sparks {
+  transition-delay: 0.3s;
+  animation-name: sparks;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+}
+
+@keyframes sparks {
+  to {
+    opacity: 100%;
+  }
+}
+
+  /* перекрашивание контура обратно, когда сердечко выключат */
+.heart .contour {
+  transition: fill 0.1s linear;
+}

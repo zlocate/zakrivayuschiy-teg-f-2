@@ -4,3 +4,119 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+:root.theme-light {
+  --main-font-family: "Inter-Variable", sans-serif;
+  --accent-font-family: "PressStart2P-Regular", sans-serif;
+  --main-color: #000;
+  --heart-color: #FF0000;
+  --button-text-color: #fff;
+  --background-color: #fff;
+  --subheader-font-weight: 700;
+  --description-font-weight: 400;
+  --button-font-weight: 400;
+  --button-font-size: 14px;
+  --title-font-size: clamp(3.0625rem, 1.8041rem + 5.3691vw, 4.0625rem);
+  --subheader-font-size: clamp(0.875rem, 0.1672rem + 3.0201vw, 1.4375rem);
+  --background-image:
+    repeating-linear-gradient(
+      90deg,
+      #d3d3d3 0,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px),
+    repeating-linear-gradient(
+      #d3d3d3 0,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px),
+    linear-gradient(#e7e7e7 0.01%, #1a1a1a);
+}
+
+:root.theme-dark {
+  --main-font-family: "Inter-Variable", sans-serif;
+  --accent-font-family: "PressStart2P-Regular", sans-serif;
+  --main-color: #00CC14;
+  --heart-color: #FF0000;
+  --button-text-color: #00CC14;
+  --background-color: #000;
+  --subheader-font-weight: 785;
+  --description-font-weight: 465;
+  --button-font-weight: 400;
+  --button-font-size: 14px;
+  --title-font-size: clamp(3.0625rem, 1.8041rem + 5.3691vw, 4.0625rem);
+  --subheader-font-size: clamp(0.875rem, 0.1672rem + 3.0201vw, 1.4375rem);
+  --background-image:
+    repeating-linear-gradient(
+      90deg,
+      #000 0,
+      #000 2px,
+      transparent 2px,
+      transparent 4px),
+    repeating-linear-gradient(
+      #000 0,
+      #000 2px,
+      transparent 2px,
+      transparent 4px),
+    linear-gradient(#007f0c, #004306);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --main-font-family: "Inter-Variable", sans-serif;
+    --accent-font-family: "PressStart2P-Regular", sans-serif;
+    --main-color: #000;
+    --heart-color: #FF0000;
+    --button-text-color: #fff;
+    --background-color: #fff;
+    --subheader-font-weight: 700;
+    --description-font-weight: 400;
+    --button-font-weight: 400;
+    --button-font-size: 14px;
+    --title-font-size: clamp(3.0625rem, 1.8041rem + 5.3691vw, 4.0625rem);
+    --subheader-font-size: clamp(0.875rem, 0.1672rem + 3.0201vw, 1.4375rem);
+    --background-image:
+    repeating-linear-gradient(
+      90deg,
+      #d3d3d3 0,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px),
+    repeating-linear-gradient(
+      #d3d3d3 0,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px),
+    linear-gradient(#e7e7e7 0.01%, #1a1a1a);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-font-family: "Inter-Variable", sans-serif;
+    --accent-font-family: "PressStart2P-Regular", sans-serif;
+    --main-color: #00CC14;
+    --heart-color: #FF0000;
+    --button-text-color: #00CC14;
+    --background-color: #000;
+    --subheader-font-weight: 785;
+    --description-font-weight: 465;
+    --button-font-weight: 400;
+    --button-font-size: 14px;
+    --title-font-size: clamp(3.0625rem, 1.8041rem + 5.3691vw, 4.0625rem);
+    --subheader-font-size: clamp(0.875rem, 0.1672rem + 3.0201vw, 1.4375rem);
+    --background-image:
+    repeating-linear-gradient(
+      90deg,
+      #000 0,
+      #000 2px,
+      transparent 2px,
+      transparent 4px),
+    repeating-linear-gradient(
+      #000 0,
+      #000 2px,
+      transparent 2px,
+      transparent 4px),
+    linear-gradient(#007f0c, #004306);
+  }
+}
