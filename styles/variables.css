@@ -1,7 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
   --main-font-family: "Inter-Variable", sans-serif;
-  --accent-font-family: "PressStart2P-Regular", sans-serif;
+  --accent-font-family: "PressStart2P", sans-serif;
   --main-color: #000;
   --heart-color: #FF0000;
   --button-text-color: #fff;

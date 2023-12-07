@@ -7,7 +7,7 @@
 
 :root.theme-light {
   --main-font-family: "Inter-Variable", sans-serif;
-  --accent-font-family: "PressStart2P-Regular", sans-serif;
+  --accent-font-family: "PressStart2P", sans-serif;
   --main-color: #000;
   --heart-color: #FF0000;
   --button-text-color: #fff;
@@ -35,7 +35,7 @@
 
 :root.theme-dark {
   --main-font-family: "Inter-Variable", sans-serif;
-  --accent-font-family: "PressStart2P-Regular", sans-serif;
+  --accent-font-family: "PressStart2P", sans-serif;
   --main-color: #00CC14;
   --heart-color: #FF0000;
   --button-text-color: #00CC14;
@@ -64,7 +64,7 @@
 @media (prefers-color-scheme: light) {
   :root {
     --main-font-family: "Inter-Variable", sans-serif;
-    --accent-font-family: "PressStart2P-Regular", sans-serif;
+    --accent-font-family: "PressStart2P", sans-serif;
     --main-color: #000;
     --heart-color: #FF0000;
     --button-text-color: #fff;
@@ -94,7 +94,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --main-font-family: "Inter-Variable", sans-serif;
-    --accent-font-family: "PressStart2P-Regular", sans-serif;
+    --accent-font-family: "PressStart2P", sans-serif;
     --main-color: #00CC14;
     --heart-color: #FF0000;
     --button-text-color: #00CC14;
